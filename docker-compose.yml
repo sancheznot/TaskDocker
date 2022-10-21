@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  webapp:
+    container_name: prueba1Compose
+    restart: always
+    build: .
+    ports:
+      - "4000:3000"
+    links:
+      - mongoDb
+    volumes:
+      - .:/usr/src/app
+  mongoDb:
+    container_name: mydatabase
+    image: mongo
+    ports:
+      - "27018:27017"
+    logging:
+      driver: none

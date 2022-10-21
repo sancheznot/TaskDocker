@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to left bottom,
+    #929190,
+    #827e77,
+    #716b5f,
+    #5e5a48,
+    #4a4a32
+  );
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(255, 0, 0, 0.04);
+}
+.container {
+  width: 98vw;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  margin: 5px auto;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.h1 {
+  font-size: 4vw;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.taskcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.form,
+.task {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* min-height: 375px; */
+}
+.add{
+  color: #333;
+}
+.task {
+  background: rgba(109, 80, 141, 0.28);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(109, 80, 141, 0.59);
+}
+.colums {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(128, 128, 128);
+  border-radius: 16px;
+}
+.datos {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 0.5vh;
+  font-size: 1vw;
+}
+.row:hover {
+  background: rgba(109, 80, 141, 0.304);
+}
+.strong {
+  font-weight: bold;
+}
+.inputTitle {
+  width: 40%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2vw;
+}
+.input {
+  width: 25vw;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0 1rem;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  font-size: 1.3vw;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.input:focus {
+  color: rgb(0, 0, 0);
+  background: rgba(113, 255, 155, 0.789);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.1px);
+  -webkit-backdrop-filter: blur(2.1px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.textDescription {
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textarea {
+  width: 25vw;
+  max-width: 25vw;
+  min-width: 25vw;
+  min-height: 20vh;
+  max-height: 20vh;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0 1rem;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+  font-size: 1.3vw;
+}
+.textarea:focus {
+  background: rgba(113, 255, 155, 0.789);
+  color: rgb(0, 0, 0);
+}
+/* submit */
+.btn {
+  width: 15vw;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.3vw;
+  background: rgba(94, 94, 94, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(2.9px);
+  border: 1px solid rgba(94, 94, 94, 1);
+}
+.btn:hover {
+  background: rgba(215, 215, 215, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(2.9px);
+  border: 1px solid rgba(94, 94, 94, 1);
+}
+
+/* buttons */
+.button {
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.done {
+  /* From https://css.glass */
+  background: rgba(119, 246, 88, 0.63);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(119, 246, 88, 0.72);
+  color: rgb(77, 77, 77);
+}
+.pending {
+  background: rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(0, 0, 0, 0.59);
+}
+.redbutton {
+  background: rgba(255, 0, 0, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(255, 0, 0, 1);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../public/index.js" defer></script>
+    <link rel="stylesheet" href="../public/style.css" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="h1">CRUD API</h1>
+      <div class="taskcontainer">
+        <form action="/add" method="POST" class="form">
+          <div class="inputTitle">
+            <legend class="add">Add a task</legend>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="input"
+              placeholder="add new task"
+            />
+          </div>
+          <div class="textDescription">
+            <textarea
+              type="textarea"
+              name="description"
+              id="description"
+              placeholder="description"
+              class="textarea"
+            ></textarea>
+          </div>
+          <div class="submit">
+            <button type="submit" class="btn" id="submit">Add</button>
+          </div>
+        </form>
+
+        <div class="task">
+          <div class="row">
+            <div class="datos strong">#</div>
+            <div class="datos strong">Title</div>
+            <div class="datos strong">Description</div>
+            <div class="datos strong">Operations</div>
+          </div>
+          <div class="colums">
+            <%for (let i = 0; i < task.length; i++) {%>
+            <div class="row">
+              <div class="datos"><%= i+1 %></div>
+              <div class="datos"><%= task[i].title %></div>
+              <div class="datos"><%= task[i].description %></div>
+              <div class="datos">
+                <a
+                  href="/done/<%= task[i].id %>"
+                  class="<%= task[i].status ? 'button done' : 'button pending' %>"
+                >
+                  Done
+                </a>
+                <a href="/delete/<%= task[i].id %>" class="redbutton button"
+                  >Delete</a
+                >
+              </div>
+            </div>
+            <% }%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
